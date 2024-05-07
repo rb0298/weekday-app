@@ -1,4 +1,3 @@
-import { useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -17,7 +16,7 @@ function JobFilter({ label, options, value, action }) {
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 200 }}>
+    <FormControl sx={{ m: 1, minWidth: 220 }}>
       <InputLabel id="demo-simple-select-autowidth-label">{label}</InputLabel>
       <Select
         labelId="demo-simple-select-autowidth-label"

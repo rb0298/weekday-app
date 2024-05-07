@@ -1,30 +1,45 @@
+import { textTransform } from "../resuablefunc";
+
+textTransform;
 function Card({ data }) {
   return (
     <div className="job">
-      <header>
+      <header style={{ marginBottom: "20px" }}>
         <img src={data.logoUrl} alt=""></img>
         <div>
           <p style={{ letterSpacing: "2px", fontSize: "16px" }}>
-            {data.companyName}
+            {textTransform(data.companyName)}
           </p>
           <p style={{ letterSpacing: "1px", fontSize: "20px" }}>
-            {data.jobRole.at(0).toUpperCase() + data.jobRole.slice(1)}
+            {textTransform(data.jobRole)}
           </p>
           <p style={{ letterSpacing: "-1px", fontSize: "14px" }}>
-            {data.location.at(0).toUpperCase() + data.location.slice(1)}
+            {textTransform(data.location)}
           </p>
         </div>
       </header>
-      <label style={{ letterSpacing: "1px", fontSize: "20px" }}>
+      <label style={{ letterSpacing: "1px", fontSize: "18px" }}>
         {" "}
         Estimated Salary:{" "}
-        <span style={{ fontSize: "18px" }}>
+        <span style={{ fontSize: "16px" }}>
           ₹{data.minJdSalary}-{data.maxJdSalary} LPA✅
         </span>
       </label>
-      <h3 className="job-title">About Company:</h3>
+      <h3>About Company:</h3>
       <h4> About us</h4>
-      <p className="details">{data.jobDetailsFromCompany}</p>
+
+      <p className="job-details">
+        <span style={{ opacity: 1 }}>
+          {data.jobDetailsFromCompany.split(" ").slice(0, 50).join(" ")}{" "}
+        </span>
+        <span style={{ opacity: 0.4 }}>
+          {data.jobDetailsFromCompany.split(" ").slice(50, 60).join(" ")}
+        </span>{" "}
+        <span style={{ opacity: 0.2 }}>
+          {data.jobDetailsFromCompany.split(" ").slice(60, 70).join(" ")}
+        </span>
+        <a>{"Show more"}</a>
+      </p>
       <label> Minimum Experience</label>
       <p>{data.minExp} years</p>
       <button
