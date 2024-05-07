@@ -16,31 +16,45 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-#root {
+.app {
+  padding: 80px;
+}
+/* #root {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container {
-  display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
   width: 80%;
+} */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-bottom: 60px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 .job {
   width: 380px;
-  min-width: 380px;
-  max-width: 500px;
-  padding: 60px;
+  padding: 30px;
   border: 2px solid #eee;
   border-radius: 5%;
   box-shadow: 2px 2px 4px 3px rgba(230, 230, 230, 0.9);
   background-color: #fefefe;
+  margin: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 855px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
   .job {
-    width: 100%;
+    width: 70%;
+    max-width: 450px;
   }
 }
 
@@ -64,4 +78,25 @@ button {
   border-radius: 20px;
   text-transform: uppercase;
   font-size: 1.4rem;
+}
+.spinnerContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, var(--color-light--2));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
 }
