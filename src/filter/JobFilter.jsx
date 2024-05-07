@@ -5,14 +5,15 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useDispatch } from "react-redux";
 
-function JobFilter({ label, options }) {
+function JobFilter({ label, options, value, action }) {
   const dispatch = useDispatch();
-  const [age, setAge] = useState("");
-  console.log(options);
+  // const [age, setAge] = useState("");
 
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setAge(event.target.value);
+  const handleChange = (e) => {
+    // console.log(event.target.value);
+    // setAge(event.target);
+    console.log(e.target.value);
+    dispatch(action(e.target.value));
   };
 
   return (
@@ -21,7 +22,7 @@ function JobFilter({ label, options }) {
       <Select
         labelId="demo-simple-select-autowidth-label"
         id="demo-simple-select-autowidth"
-        value={age}
+        value={value}
         onChange={handleChange}
         autoWidth
         label={label}

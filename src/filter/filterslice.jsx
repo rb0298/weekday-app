@@ -13,22 +13,22 @@ const filterSlice = createSlice({
   name: "filter",
   initialState,
   reducers: {
-    roles(state, action) {
-      state.roles = action.payLoad;
+    setRoles(state, action) {
+      state.roles = action.payload;
     },
-    companyName(state, action) {
+    setCompanyName(state, action) {
       state.companyName = action.payload;
     },
-    numOfEmployees(state, action) {
+    setNumOfEmployees(state, action) {
       state.numOfEmployees = action.payload;
     },
-    minSal(state, action) {
+    setMinSal(state, action) {
       state.minSal = action.payload;
     },
-    remote(state, action) {
+    setRemote(state, action) {
       state.remote = action.payload;
     },
-    experience(state, action) {
+    setExperience(state, action) {
       state.experience = action.payload;
     },
   },
@@ -36,11 +36,10 @@ const filterSlice = createSlice({
 
 export default filterSlice.reducer;
 export const {
-  roles,
-  companyName,
-  numOfEmployees,
-  minSal,
-  remote,
-  experience,
+  setRoles,
+  setCompanyName,
+  setNumOfEmployees,
+  setMinSal,
+  setRemote,
+  setExperience,
 } = filterSlice.actions;
-console.log(filterSlice);
