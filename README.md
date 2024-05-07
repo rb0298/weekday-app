@@ -1,8 +1,43 @@
-# React + Vite
+Weekday App is a React-based application built on Vite version 4. It fetches data from an external API and displays the data in cards. Users can filter the data using the desired filter options, and the app fetches data accordingly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+To install and run the Weekday App locally, follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rb0298/weekday-app.git
+   cd weekday-app
+
+   Install dependencies:
+   npm install
+
+   To use the Weekday App:
+   Run the development server:
+   npm run dev
+   ```
+
+Open your browser and navigate to http://localhost:port to view the application.
+Enter your desired filter options to fetch and display data in cards.
+
+Technologies Used
+React
+Vite version 4
+Material UI
+Redux
+HTML/CSS
+JavaScript
+
+The folder structure of the Weekday App is as follows:
+/public: Contains the HTML file and other public assets.
+/src: Contains the React components, application logic, and API handling.
+/src/filters: Contains components for filtering data.
+/src/cards: Contains components for displaying data in cards.
+
+Configuration
+No special configuration is required to run the Weekday App.
+
+Development
+To run the application in development mode:
+npm run dev
