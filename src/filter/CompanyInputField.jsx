@@ -7,10 +7,9 @@ import { setCompanyName } from "./filterslice";
 export default function CompanyInputField() {
   const dispatch = useDispatch();
   const { companyName } = useSelector((store) => store.filter);
-  console.log(companyName);
 
   const handleInputChange = (event) => {
-    dispatch(setCompanyName(event.target.value)); // Pass event.target.value
+    dispatch(setCompanyName(event.target.value));
   };
 
   return (

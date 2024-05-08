@@ -17,7 +17,6 @@ import {
 } from "./filterslice";
 function AllFilters() {
   const data = useSelector((store) => store.filter);
-  console.log(data);
 
   return (
     <div className="filter">

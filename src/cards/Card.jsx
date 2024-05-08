@@ -3,9 +3,13 @@ import { textTransform } from "../resuablefunc";
 textTransform;
 function Card({ data }) {
   return (
-    <div className="job">
+    <div className="card">
       <header style={{ marginBottom: "20px" }}>
-        <img src={data.logoUrl} alt=""></img>
+        <img
+          style={{ width: "20%", height: "50%", alignSelf: "center" }}
+          src={data.logoUrl}
+          alt=""
+        ></img>
         <div>
           <p style={{ letterSpacing: "2px", fontSize: "16px" }}>
             {textTransform(data.companyName)}
@@ -25,23 +29,26 @@ function Card({ data }) {
           ₹{data.minJdSalary}-{data.maxJdSalary} LPA✅
         </span>
       </label>
-      <h3>About Company:</h3>
-      <h4> About us</h4>
+      <h2 style={{ opacity: "0.7", marginBottom: "10px" }}>About Company:</h2>
+      <h4 style={{ marginTop: "0px" }}> About us</h4>
 
       <p className="job-details">
         <span style={{ opacity: 1 }}>
           {data.jobDetailsFromCompany.split(" ").slice(0, 50).join(" ")}{" "}
         </span>
-        <span style={{ opacity: 0.4 }}>
+        <span style={{ opacity: 0.5 }}>
           {data.jobDetailsFromCompany.split(" ").slice(50, 60).join(" ")}
         </span>{" "}
-        <span style={{ opacity: 0.2 }}>
+        <span style={{ opacity: 0.1 }}>
           {data.jobDetailsFromCompany.split(" ").slice(60, 70).join(" ")}
         </span>
-        <a>{"Show more"}</a>
+        <a style={{ letterSpacing: "1px" }}>{"View job"}</a>
       </p>
-      <label> Minimum Experience</label>
-      <p>{data.minExp} years</p>
+      <label style={{ letterSpacing: "2px", opacity: "0.8", fontSize: "20px" }}>
+        {" "}
+        Minimum Experience
+      </label>
+      <p style={{ fontSize: "18px", marginTop: "10px" }}>{data.minExp} years</p>
       <button
         style={{
           borderRadius: "20px",
