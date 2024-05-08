@@ -7,7 +7,11 @@ export function useFilterData(elementRef) {
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(1);
   const filterCondition = useSelector((store) => store.filter);
+  /*to filter the data based on condition*/
   const filterData = applyFilters(jobs, filterCondition);
+
+  /* used intersection observer api to observe the element at end such that when
+  it intersects the view port, fetchMore Jobs function will be called */
   useEffect(() => {
     function onIntersection(entries) {
       const entry = entries[0];
@@ -18,6 +22,9 @@ export function useFilterData(elementRef) {
     return () => observer && observer.disconnect();
   }, [jobs]);
 
+
+
+  /* method to fetch data from an api*/
   const fetchMoreJobs = async () => {
     try {
       const response = await fetch(

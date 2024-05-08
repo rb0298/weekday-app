@@ -15,9 +15,15 @@ import {
   setRemote,
   setExperience,
 } from "./filterslice";
+
 function AllFilters() {
+  /* used redux store to manage the state*/
+
   const data = useSelector((store) => store.filter);
 
+  /*all the filter element are rendered below 
+  used materialUI for input element and vanilla css for select
+  */
   return (
     <div className="filter">
       <JobFilter

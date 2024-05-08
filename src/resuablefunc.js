@@ -10,6 +10,7 @@ const checkLocation = (val1, val2) => {
   ); // Corrected condition
 };
 
+/* to apply filters*/
 export const applyFilters = (jobs, filters) => {
   let filteredJobs = jobs;
   if (filters.roles) {

@@ -1,3 +1,4 @@
+/*filter data*/
 export const roles = [
   "Backend",
   "Frontend",
@@ -25,10 +26,4 @@ export const experience = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 export const remote = ["Remote", "Hybrid", "In-Office"];
 export const minSal = ["0L", "10L", "20L", "30L", "40L", "50L", "60L"];
 
-// export default {
-//   Roles:roles,
-//   "Number Of Employees": numOfEmployees,
-//   Experience: experience,
-//   Remote: remote,
-//   "Minimum Base Pay Salary": minSal,
-// };
+

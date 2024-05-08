@@ -1,6 +1,5 @@
 import { textTransform } from "../resuablefunc";
 
-textTransform;
 function Card({ data }) {
   return (
     <div className="card">
